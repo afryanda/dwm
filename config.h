@@ -24,10 +24,17 @@ static char normfgcolor[]           	= "#bbbbbb";
 static char selfgcolor[]            	= "#eeeeee";
 static char selbordercolor[]        	= "#005577";
 static char selbgcolor[]            	= "#005577";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+};
+static const unsigned int alphas[][3]      = {
+       /*               fg      bg        border     */
+       [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+       [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -46,6 +53,7 @@ static const Rule rules[] = {
 	{ "Steam",    NULL,       NULL,       1<<4,         0,           -1 },
 	{ "lutris",   NULL,       NULL,       1<<4,         0,           -1 },
 	{ "atom",     NULL,       NULL,       1<<5,         0,           -1 },
+	{ "jetbrains-studio",     NULL,       NULL,       1<<5,         1,           -1 },
 };
 
 /* layout(s) */
