@@ -17,8 +17,8 @@ static const char col_magenta[]     = "#2aa298";
 static const char col_bg_highlight[] = "#002d38";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_base0, col_base03, col_base03 },
-	[SchemeSel]  = { col_base2, col_bg_highlight, col_magenta },
+	[SchemeNorm] = { col_base0, col_base03, col_base01 },
+	[SchemeSel]  = { col_base2, col_base03, col_base01 },
 };
 
 /* tagging */
@@ -37,6 +37,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
+static const unsigned int gappx = 0; /* gaps around tiled windows */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 static const int refreshrate = 120;  /* refresh rate (per second) for client move/resize */
